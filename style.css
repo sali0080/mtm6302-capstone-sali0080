@@ -1,0 +1,204 @@
+/* Main colors throughout entire site (easier to change when needed) */
+:root {
+    --bs-primary: #002a5b;
+    --bs-secondary: #696969;
+    --bs-light-color: #cbcbcb;
+    --bs-dark-color: #1f1f1f;
+    --bs-bright: #fe1923;
+}
+
+/******** STANDARD MAIN PAGE STYLING  *********/
+html {
+    margin: 10px 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oxanium";
+}
+
+p {
+    font-family: "Nunito";
+}
+
+/******** SECTION STYLING *********/
+
+/* Main Heading style */
+.heading {
+    background-color: #002a5b;
+    color: var(--bs-light-color);
+    text-align: center;
+    padding: 100px;
+}
+
+.heading img {
+    width: 100px;
+    float: left;
+    padding-bottom: 100px;
+}
+
+.navbar {
+    width: 100%;
+}
+
+/* Date Selection style */
+
+.date-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #cbcbcb;
+    width: 100%;
+}
+
+.date {
+    flex: 1;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.date-input {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 80px;
+
+}
+
+.date-input input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.date-input button {
+    padding: 6px 12px;
+    font-size: 16px;
+    background-color: #002a5b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 80px;
+}
+
+/* Featured Picture style */
+.featured-pic {
+    background-color: #002a5b;
+    color: #cbcbcb;
+}
+
+.featured-picture {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.right {
+    flex: 1;
+    text-align: left;
+}
+
+.featured-picture img {
+    padding-left: 120px;
+    padding-top: 50px;
+
+}
+
+.featured-pic button {
+    background-color: #cbcbcb;
+    color: #1f1f1f;
+    border-color: #1f1f1f;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.card-group {
+    background-color: #002a5b;
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+/* APOD Details style */
+.apod-details {
+    background-color: #cbcbcb;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+
+.apod-details img {
+    float: right;
+}
+
+.save-favorite {
+    margin-bottom: 30px;
+}
+
+/* Favourite Images style */
+.favourite {
+    background-color: #002a5b;
+    color: var(--bs-light-color);
+    width: 100%;
+}
+
+.favourite-heading {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.favorite-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-right: 20px;
+    background-color: var(--bs-light-color);
+}
+
+.date {
+    font-size: 18px;
+}
+
+/* Footer style */
+.footer {
+    padding: 40px;
+    text-align: center;
+    background-color: var(--bs-light-color);
+    width: 100%;
+}
+
+.footer p {
+    margin: 2px 0;
+    font-size: 14px;
+}
