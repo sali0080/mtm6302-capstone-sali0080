@@ -10,6 +10,7 @@
 /******** STANDARD MAIN PAGE STYLING  *********/
 html {
     margin: 10px 10px;
+    /* Padding around entire page */
 }
 
 h1,
@@ -33,11 +34,13 @@ p {
     color: var(--bs-light-color);
     text-align: center;
     padding: 100px;
+    /* Padding around header content */
 }
 
 .heading img {
     width: 100px;
     float: left;
+    /* Align logo to the left */
     padding-bottom: 100px;
 }
 
@@ -49,8 +52,10 @@ p {
 
 .date-selection {
     display: flex;
+    /* Flexbox for layout */
     justify-content: space-between;
     align-items: flex-start;
+    /* Aligns items to the top */
     gap: 20px;
     background-color: #cbcbcb;
     width: 100%;
@@ -66,6 +71,7 @@ p {
 .date-input {
     flex: 1;
     display: flex;
+    /* Flexbox for column layout */
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -99,6 +105,7 @@ p {
 
 .featured-picture {
     display: flex;
+    /* Flexbox for horizontal layout */
     justify-content: space-between;
     align-items: center;
     gap: 10px;
@@ -142,6 +149,7 @@ p {
 .apod-details {
     background-color: #cbcbcb;
     width: 100%;
+    /* Padding around APOD details */
     padding-top: 50px;
     padding-left: 50px;
     padding-bottom: 50px;
@@ -169,7 +177,9 @@ p {
 
 .favorite-container {
     display: flex;
+    /* Flexbox for horizontal alignment */
     align-items: center;
+    /* Aligns items vertically */
     margin: 10px 0;
 
 }
@@ -178,7 +188,9 @@ p {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    /* Makes element circular */
     display: flex;
+    /* Centers content in circle */
     justify-content: center;
     align-items: center;
     font-size: 50px;
@@ -201,4 +213,119 @@ p {
 .footer p {
     margin: 2px 0;
     font-size: 14px;
+}
+
+/* Media query for iPhone screen width */
+@media (max-width: 600px) {
+
+    /* Responsive adjustments for mobile */
+    .heading {
+        padding: 50px 20px;
+        /* Reduced padding for mobile */
+    }
+
+    .heading img {
+        width: 80px;
+        padding-bottom: 50px;
+    }
+
+    .heading h1 {
+        font-size: 24px;
+    }
+
+    .heading p {
+        font-size: 14px;
+    }
+
+    /* Date Selection Section */
+    .date-selection {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        padding: 20px;
+        /* Reduced padding for mobile */
+        gap: 10px;
+    }
+
+    .date {
+        margin: 0;
+        text-align: center;
+    }
+
+    .date-input {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Featured Picture Section */
+    .featured-picture {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .left img {
+        padding: 0;
+        width: 80%;
+    }
+
+    .featured-pic button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Card Group Section */
+    .card-group {
+        flex-direction: column;
+        /* Stack cards vertically */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* APOD Details Section */
+    .apod-details {
+        padding: 20px;
+        /* Compact padding for mobile */
+    }
+
+    .apod-details .row {
+        flex-direction: column;
+    }
+
+    .apod-details .card {
+        margin-bottom: 20px;
+    }
+
+    /* Favourite Images Section */
+    .favourite-heading {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .favorite-container {
+        flex-direction: column;
+        /* Stack favorite items vertically */
+        align-items: center;
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .date {
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px;
+        font-size: 12px;
+    }
 }
