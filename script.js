@@ -2,7 +2,7 @@
 const API_KEY = '98FNjSktCHtH1JNywR35HVwjI6Dfo3TkcPZnmOaA';
 const BASE_URL = 'https://api.nasa.gov/planetary/apod';
 
-// DOM Elements
+// DOM Elements 
 // Grabbing the necessary elements from the HTML to interact with the user interface
 const dateInput = document.getElementById('start');
 const submitButton = document.querySelector('.btn-primary');
@@ -74,7 +74,10 @@ function renderFavorites() {
 // Adds the current APOD to the favorites array and updates local storage
 function saveFavorite(data) {
     if (!favorites.some(fav => fav.url === data.url)) {
-        favorites.push({ title: data.title, url: data.url });
+        favorites.push({
+            title: data.title,
+            url: data.url
+        });
         localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites)); // Update local storage
         renderFavorites();
     } else {
@@ -99,7 +102,7 @@ submitButton.addEventListener('click', async () => {
         return;
     }
 
-    const data = await fetchAPOD(date);  // Fetch the APOD for the selected date
+    const data = await fetchAPOD(date); // Fetch the APOD for the selected date
     if (data) {
         updateFeaturedPicture(data);
         saveButton.onclick = () => saveFavorite(data);
@@ -108,5 +111,3 @@ submitButton.addEventListener('click', async () => {
 
 // Initial render
 renderFavorites(); // Display saved favorites when the page loads
-
-
